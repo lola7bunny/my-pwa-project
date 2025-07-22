@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk 2077 | Фан-сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .trailer-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .trailer-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .universe-description {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-left: 3px solid #ff0099;
+            margin: 30px 0;
+        }
+    </style>
+	<link rel="manifest" href="/manifest.json">
+	<script>
+	  if ('serviceWorker' in navigator) {
+		window.addEventListener('load', () => {
+		  navigator.serviceWorker.register('/service-worker.js')
+			.then(registration => console.log('ServiceWorker registered'))
+			.catch(err => console.log('ServiceWorker error:', err));
+	    });
+	  }
+	</script>	
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/cyberpunk-logo.png" alt="Cyberpunk 2077">
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="index.html">Главная</a></li>
+                <li><a href="characters.html">Персонажи</a></li>
+                <li><a href="guides.html">Гайды</a></li>
+                <li><a href="forum.html">Форум</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Добро пожаловать в Найт-Сити</h1>
+            <p>Откройте для себя мир Cyberpunk 2077</p>
+        </section>
+
+        <section class="universe-description">
+            <h2>Вселенная Cyberpunk 2077</h2>
+            <p>2077 год. Найт-Сити — мегаполис, где одержимость властью, гламуром и модификациями тела не знает границ. Вы играете за V, наёмника в поисках уникального импланта, который является ключом к бессмертию.</p>
+            <p>В этом открытом мире вы сами решаете, как выглядит ваш персонаж, какие у него навыки и как вы будете пробивать себе путь к вершинам города.</p>
+        </section>
+
+        <div class="trailer-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qIcTM8WXFjk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>Фан-сайт Cyberpunk 2077 © 2025. Неофициальный ресурс.</p>
+        <p>Все права принадлежат CD Projekt RED</p>
+    </footer>
+</body>
+</html>
