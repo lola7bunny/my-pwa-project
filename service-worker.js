@@ -3,7 +3,13 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/style.css',
-  '/script.js'
+  '/script.js',
+  '/V.jpg',
+  '/johnny.jpg',
+  '/judy.jpg',
+  '/panam.jpg',
+  '/cyberpunk-logo.png',
+  
 ];
 
 self.addEventListener('install', (event) => {
