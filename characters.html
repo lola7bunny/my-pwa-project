@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонажи | Cyberpunk 2077</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Стили для страницы персонажей */
+        .characters-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .character-card {
+            background: rgba(20, 20, 30, 0.8);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(255, 0, 153, 0.4);
+        }
+        
+        .character-image-container {
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .character-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.5s ease;
+        }
+        
+        .character-card:hover .character-image {
+            transform: scale(1.1);
+        }
+        
+        .character-info {
+            padding: 20px;
+            color: #e0e0e0;
+        }
+        
+        .character-info h2 {
+            color: #ff0099;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        
+        .character-info p {
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+        
+        .character-role {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 0, 153, 0.7);
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .characters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .character-image-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/cyberpunk-logo.png" alt="Cyberpunk 2077">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li class="active"><a href="characters.html">Персонажи</a></li>
+                <li><a href="guides.html">Гайды</a></li>
+                <li><a href="forum.html">Форум</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="characters-container">
+        <h1>Ключевые персонажи</h1>
+        
+        <div class="characters-grid">
+            <!-- V -->
+            <div class="character-card">
+                <div class="character-image-container">
+                    <img src="images/characters/v.jpg" alt="V" class="character-image" loading="lazy">
+                    <div class="character-role">Главный герой</div>
+                </div>
+                <div class="character-info">
+                    <h2>V</h2>
+                    <p>Наёмник из Найт-Сити, чье тело стало сосудом для сознания легендарного террориста Джонни Сильверхэнда. Ваши решения определяют его/ее судьбу.</p>
+                </div>
+            </div>
+            
+            <!-- Джонни Сильверхэнд -->
+            <div class="character-card">
+                <div class="character-image-container">
+                    <img src="images/characters/johnny.jpg" alt="Джонни Сильверхэнд" class="character-image" loading="lazy">
+                    <div class="character-role">Легенда рока</div>
+                </div>
+                <div class="character-info">
+                    <h2>Джонни Сильверхэнд</h2>
+                    <p>Харизматичный лидер группы Samurai, борец против корпораций. Его сознание теперь существует в голове V.</p>
+                </div>
+            </div>
+            
+            <!-- Джуди Альварес -->
+            <div class="character-card">
+                <div class="character-image-container">
+                    <img src="images/characters/judy.jpg" alt="Джуди Альварес" class="character-image" loading="lazy">
+                    <div class="character-role">Техник BRAIN DANCE</div>
+                </div>
+                <div class="character-info">
+                    <h2>Джуди Альварес</h2>
+                    <p>Талантливый модификатор BRAIN DANCE и бывший член банды Mox. Становится близким другом (или больше) для женского V.</p>
+                </div>
+            </div>
+            
+            <!-- Панам Палмер -->
+            <div class="character-card">
+                <div class="character-image-container">
+                    <img src="images/characters/panam.jpg" alt="Панам Палмер" class="character-image" loading="lazy">
+                    <div class="character-role">Кочевник Альдекальдо</div>
+                </div>
+                <div class="character-info">
+                    <h2>Панам Палмер</h2>
+                    <p>Упрямая и преданная член клана кочевников. Верный союзник и возможный романтический интерес для мужского V.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Фан-сайт Cyberpunk 2077 © 2023. Неофициальный ресурс.</p>
+        <p>Все права принадлежат CD Projekt RED</p>
+    </footer>
+</body>
+</html>

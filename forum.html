@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форум | Cyberpunk 2077</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .forum-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+        .comment-form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border: 1px solid #ff0099;
+            margin-bottom: 30px;
+        }
+        .comment-form textarea {
+            width: 100%;
+            min-height: 100px;
+            background-color: #111;
+            border: 1px solid #333;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .comment-form button {
+            background-color: #ff0099;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .comments-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .comment {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-left: 3px solid #ff0099;
+        }
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #ff0099;
+        }
+        .comment-content {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/cyberpunk-logo.png" alt="Cyberpunk 2077">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="characters.html">Персонажи</a></li>
+                <li><a href="guides.html">Гайды</a></li>
+                <li class="active"><a href="forum.html">Форум</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Форум фанатов</h1>
+        
+        <div class="forum-container">
+            <div class="comment-form">
+                <h2>Оставить комментарий</h2>
+                <textarea id="commentText" placeholder="Ваше сообщение..."></textarea>
+                <button onclick="addComment()">Отправить</button>
+            </div>
+
+            <div class="comments-list" id="commentsList">
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">Ночной_гонщик</span>
+                        <span class="comment-date">15.11.2023</span>
+                    </div>
+                    <div class="comment-content">
+                        Кто-нибудь уже прошел новое дополнение? Как вам сюжет?
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">Кибер-самурай</span>
+                        <span class="comment-date">14.11.2023</span>
+                    </div>
+                    <div class="comment-content">
+                        Обновили патч 2.0 - теперь игра совсем другая! Механики боя стали намного лучше.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Фан-сайт Cyberpunk 2077 © 2025. Неофициальный ресурс.</p>
+        <p>Все права принадлежат CD Projekt RED</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

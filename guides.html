@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гайды | Cyberpunk 2077</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .guides-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px;
+        }
+        .guide-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-left: 4px solid #ff0099;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        .guide-card:hover {
+            background-color: rgba(255, 0, 153, 0.1);
+        }
+        .guide-difficulty {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+        .beginner {
+            background-color: #4CAF50;
+        }
+        .intermediate {
+            background-color: #FFC107;
+            color: #000;
+        }
+        .advanced {
+            background-color: #F44336;
+        }
+        
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal-content {
+            background-color: #111;
+            margin: 5% auto;
+            padding: 30px;
+            border: 2px solid #ff0099;
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            animation: modalopen 0.5s;
+        }
+        
+        .close-modal {
+            color: #ff0099;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close-modal:hover {
+            color: white;
+        }
+        
+        .guide-content {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/cyberpunk-logo.png" alt="Cyberpunk 2077">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="characters.html">Персонажи</a></li>
+                <li class="active"><a href="guides.html">Гайды</a></li>
+                <li><a href="forum.html">Форум</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Гайды и советы</h1>
+        
+        <div class="guides-container">
+            <div class="guide-card">
+                <span class="guide-difficulty beginner">Для начинающих</span>
+                <h2>Основы геймплея</h2>
+                <p>Узнайте основные механики игры, как прокачивать навыки и какие атрибуты важны для разных стилей игры.</p>
+                <a href="#" class="read-more" onclick="openModal('basicsModal'); return false;">Читать гайд →</a>
+            </div>
+
+            <div class="guide-card">
+                <span class="guide-difficulty intermediate">Средний уровень</span>
+                <h2>Лучшие киберимпланты</h2>
+                <p>Обзор самых полезных имплантов и где их найти. Какие стоит покупать в первую очередь.</p>
+                <a href="#" class="read-more" onclick="openModal('implantsModal'); return false;">Читать гайд →</a>
+            </div>
+
+            <div class="guide-card">
+                <span class="guide-difficulty advanced">Продвинутый</span>
+                <h2>Секретные концовки</h2>
+                <p>Как получить все возможные концовки игры и какие требования нужно выполнить для каждой из них.</p>
+                <a href="#" class="read-more" onclick="openModal('endingsModal'); return false;">Читать гайд →</a>
+            </div>
+
+            <div class="guide-card">
+                <span class="guide-difficulty intermediate">Средний уровень</span>
+                <h2>Быстрое получение денег</h2>
+                <p>Проверенные методы быстрого заработка в Найт-Сити для покупки лучшего оборудования.</p>
+                <a href="#" class="read-more" onclick="openModal('moneyModal'); return false;">Читать гайд →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальные окна с контентом гайдов -->
+    <div id="basicsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('basicsModal')">&times;</span>
+            <h2>Основы геймплея</h2>
+            <div class="guide-content">
+                <h3>1. Система атрибутов</h3>
+                <p>В Cyberpunk 2077 есть 5 основных атрибутов:</p>
+                <ul>
+                    <li><strong>Тело</strong> - здоровье, сила, использование тяжелого оружия</li>
+                    <li><strong>Рефлексы</strong> - скорость, уклонение, клинковое оружие</li>
+                    <li><strong>Техника</strong> - инженерия, взлом, техническое оружие</li>
+                    <li><strong>Интеллект</strong> - взлом, кибердеки, хакерские атаки</li>
+                    <li><strong>Холоднокровие</strong> - скрытность, точность, сопротивление</li>
+                </ul>
+                
+                <h3>2. Боевая система</h3>
+                <p>Игра предлагает несколько подходов к бою:</p>
+                <ul>
+                    <li>Прямые перестрелки</li>
+                    <li>Стелс-прохождение</li>
+                    <li>Хакерские атаки через взлом</li>
+                    <li>Ближний бой (кулаки или холодное оружие)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="implantsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('implantsModal')">&times;</span>
+            <h2>Лучшие киберимпланты</h2>
+            <div class="guide-content">
+                <h3>1. Оптическая камера</h3>
+                <p>Позволяет сканировать врагов и окружение, выделять слабые места.</p>
+                
+                <h3>2. Кибердека</h3>
+                <p>Чем мощнее дека, тем больше у вас возможностей для взлома:</p>
+                <ul>
+                    <li>Netwatch Netdriver MK.5 - лучшая для боевого взлома</li>
+                    <li>Raven Microcyber MK.4 - баланс между атакой и защитой</li>
+                </ul>
+                
+                <h3>3. Нервная система Sandevistan</h3>
+                <p>Замедляет время, что особенно полезно в ближнем бою.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="endingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('endingsModal')">&times;</span>
+            <h2>Секретные концовки</h2>
+            <div class="guide-content">
+                <h3>1. Концовка "Легенда Найт-Сити"</h3>
+                <p>Требования:</p>
+                <ul>
+                    <li>Выполнить все задания Джонни на 70% и выше</li>
+                    <li>Выбрать определенные диалоги в ключевых моментах</li>
+                    <li>Иметь хорошие отношения с Рогом</li>
+                </ul>
+                
+                <h3>2. Секретная концовка "Соло"</h3>
+                <p>Доступна только при определенных условиях:</p>
+                <ul>
+                    <li>Высокий уровень сложности</li>
+                    <li>Определенные выборы в диалогах с Джонни</li>
+                    <li>Прохождение дополнительных квестов</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="moneyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('moneyModal')">&times;</span>
+            <h2>Быстрое получение денег</h2>
+            <div class="guide-content">
+                <h3>1. Продажа оружия</h3>
+                <p>Самый быстрый способ:</p>
+                <ul>
+                    <li>Собирайте оружие с поверженных врагов</li>
+                    <li>Продавайте его оружейникам</li>
+                    <li>Особенно выгодно продавать легендарное оружие</li>
+                </ul>
+                
+                <h3>2. Взлом терминалов</h3>
+                <p>Многие терминалы содержат большие суммы:</p>
+                <ul>
+                    <li>Прокачивайте навык "Интеллект"</li>
+                    <li>Ищите терминалы в офисах корпораций</li>
+                    <li>Используйте взлом для доступа к закрытым зонам</li>
+                </ul>
+                
+                <h3>3. Побочные задания</h3>
+                <p>Некоторые побочные квесты хорошо оплачиваются:</p>
+                <ul>
+                    <li>Задания от Реджера</li>
+                    <li>Контракты на убийство</li>
+                    <li>Гонки Клэр</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Фан-сайт Cyberpunk 2077 © 2025. Неофициальный ресурс.</p>
+        <p>Все права принадлежат CD Projekt RED</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
